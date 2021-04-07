@@ -17,8 +17,8 @@ public class OrderApp {
         // AppConfig appConfig = new AppConfig();
         // MemberService memberService = appConfig.memberService();
         // OrderService orderService = appConfig.orderService();
-//        MemberService memberService = new MemberServiceImpl(null);
-//        OrderService orderService = new OrderServiceImpl(null, null);
+        // MemberService memberService = new MemberServiceImpl(null);
+        // OrderService orderService = new OrderServiceImpl(null, null);
 
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);

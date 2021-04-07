@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Configuration;
 // refactoring 완료 ( 역할과 구현이 보이게 )
 @Configuration
 public class AppConfig {
-
     // 생성자 주입
     @Bean
     public MemberService memberService(){
