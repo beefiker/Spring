@@ -7,11 +7,12 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-// It is kinda TMO, but... could be useful information
+// It is kinda TMO, but... It could be useful information by any chance
 public class BeanDefinitionTest {
 
-    // AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
-    GenericXmlApplicationContext ac = new GenericXmlApplicationContext(AppConfig.class);
+    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+    // GenericXmlApplicationContext ac = new GenericXmlApplicationContext("appConfig.xml");
 
 
     @Test
