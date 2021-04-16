@@ -46,6 +46,6 @@ class ApplicationContextBasicFindTest {
 
         // NoSuchBeanDefinitionException 에러가 터지면 성공
         assertThrows(NoSuchBeanDefinitionException.class,
-                () ->applicationContext.getBean("xxxxxx", MemberService.class));
+                () -> applicationContext.getBean("xxxxxx", MemberService.class));
     }
 }
