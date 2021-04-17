@@ -15,8 +15,24 @@ public class OrderServiceImpl implements OrderService {
 //    생성자 주입 전 코드 = 구현체에 의존한다
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy;
+
+    // Field Injection is not recommended
+    // @Autowired private  MemberRepository memberRepository;
+    // @Autowired private  DiscountPolicy discountPolicy;
+
+    // 생성자 주입
+    private  final MemberRepository memberRepository;
+    private  final DiscountPolicy discountPolicy;
+
+    // 수정자(setter) 주입 법
+    // @Autowired
+    // public void setMemberRepository(MemberRepository memberRepository) {
+    //     this.memberRepository = memberRepository;
+    // }
+    // @Autowired
+    // public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+    //     this.discountPolicy = discountPolicy;
+    // }
 
     // 생성자 주입을 통해 DIP를 지키는 코드
     @Autowired
