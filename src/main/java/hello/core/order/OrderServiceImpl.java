@@ -8,10 +8,11 @@ import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor // RequiredArgs인 final붙은 필드를 모아서 자동으로 생성자를 만들어 줌
+// @RequiredArgsConstructor // RequiredArgs인 final붙은 필드를 모아서 자동으로 생성자를 만들어 줌
 public class OrderServiceImpl implements OrderService {
 
    // 생성자 주입 전 코드 = 구현체에 의존한다
@@ -25,6 +26,12 @@ public class OrderServiceImpl implements OrderService {
     // 생성자 주입
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
+
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     // 수정자(setter) 주입 법
     // @Autowired
